@@ -1,0 +1,8 @@
+services:
+  beszel-proxy:
+    build: .
+    network_mode: host
+    environment:
+      - BESZEL_HOST=localhost:8090
+      - LISTEN_PORT=6767
+    restart: unless-stopped
